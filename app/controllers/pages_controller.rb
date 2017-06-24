@@ -22,6 +22,10 @@ class PagesController < ApplicationController
   query = RestClient.get 'https://api.producthunt.com/v1/categories', {:Authorization => "Bearer #{your_access_token}"}
   @users = JSON.parse(query)
 
+  #Requête pour récupérer les posts
+  query_posts = RestClient.get 'https://api.producthunt.com/v1/posts', {:Authorization => "Bearer #{your_access_token}"}
+  @posts = JSON.parse(query_posts)
+
   end
 end
 
