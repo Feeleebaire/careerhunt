@@ -18,7 +18,7 @@ class PagesController < ApplicationController
     your_access_token = acces_token['access_token']
 
 
-    query = RestClient.get 'https://api.producthunt.com/v1/users', {:Authorization => "Bearer #{your_access_token}"}
+    query = RestClient.get 'https://api.producthunt.com/v1/categories', {:Authorization => "Bearer #{your_access_token}"}
     @users = JSON.parse(query)
 
   end
