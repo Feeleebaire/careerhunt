@@ -3,4 +3,6 @@
 
 <%= @users%>
 
-<%= @posts %>
+<ul><% @posts.each do |key, post| %>
+<li><%= post.name %></li>
+<% end %></ul>
