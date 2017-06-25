@@ -3,6 +3,6 @@
 
 <%= @users%>
 
-<ul><% @posts.each do |key, post| %>
-<li><%= post.name %></li>
-<% end %></ul>
+<%= @posts.each do |post| %>
+<%= post %>
+<% end %>
